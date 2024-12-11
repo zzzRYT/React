@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const backgroundDiv = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const backgroundDiv = styled.div`
   width: 100dvw;
   max-width: 100%;
   height: 100dvh;
-`
+`;
 
 export const BoxContainer = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -15,7 +15,7 @@ export const BoxContainer = styled.div`
   border-radius: 20px;
   box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
-`
+`;
 
 export const Contents = styled.main`
   padding-left: 6px;
@@ -24,7 +24,7 @@ export const Contents = styled.main`
     font-size: 20px;
     margin: 0px 0px 16px 0px;
   }
-`
+`;
 
 export const TextInputWrapper = styled.div`
   position: relative;
@@ -50,18 +50,19 @@ export const TextInputWrapper = styled.div`
     background-color: inherit;
     cursor: pointer;
   }
-`
+`;
 
 export const CreateBoxWrapper = styled.div`
   margin-top: 16px;
   position: relative;
-  height: 38px;
+  height: 100%;
+  min-height: 38px;
   box-sizing: border-box;
   display: flex;
   > label {
     width: 100%;
     position: absolute;
-    top: 38px;
+    bottom: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
   .inputText {
@@ -75,10 +76,11 @@ export const CreateBoxWrapper = styled.div`
     border: none;
     cursor: pointer;
   }
-`
+`;
 
-export const BeforeModifyDiv = styled.div`
+export const BeforeModifyDiv = styled.div<{ isCheck: boolean }>`
   width: 100%;
   align-content: center;
   padding-left: 12px;
-`
+  text-decoration: ${(props) => (props.isCheck ? "line-through" : "none")};
+`;
