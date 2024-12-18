@@ -1,14 +1,8 @@
-import { Link } from "react-router-dom";
-
 const Root = () => {
   return (
     <>
       <h1>리액트 공부</h1>
-      <ul>
-        <li>
-          <Link to="/todoList">TodoList</Link>
-        </li>
-      </ul>
+      <p>리엑트 공부 너무 어려워요</p>
     </>
   );
 };

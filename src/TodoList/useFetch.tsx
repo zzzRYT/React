@@ -65,6 +65,7 @@ const useFetch = <T,>(
       setData(result);
     } catch (error) {
       alert((error as Error).message);
+      return (location.href = "/");
     }
   };
 
