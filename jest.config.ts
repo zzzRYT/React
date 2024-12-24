@@ -1,11 +1,7 @@
 export default {
-  testEnvironment: "jsdom",
+  testEnvironment: "jsdom", // 브라우저 환경 지원
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
   },
-  moduleNameMapper: {
-    "^.+\\.svg$": "jest-svg-transformer",
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-  },
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };

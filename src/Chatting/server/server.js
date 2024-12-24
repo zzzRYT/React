@@ -38,8 +38,8 @@ io.on("connection", (client) => {
   });
 });
 
-httpServer.listen(3000, () => {
-  console.log("::::소켓 서버 작동::::\nPort >>> 3000");
+httpServer.listen(3001, () => {
+  console.log("::::소켓 서버 작동::::\nPort >>> 3001");
 });
 
 app.get("/message", (_, res) => res.send("Hello from express!"));

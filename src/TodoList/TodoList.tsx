@@ -52,6 +52,7 @@ function TodoList() {
       ];
     });
     setTodo("");
+    setRandomId(getRandomId());
   };
 
   //todo 삭제
@@ -67,11 +68,6 @@ function TodoList() {
       setList(data);
     }
   }, [data]);
-
-  //랜덤값 업데이트
-  useEffect(() => {
-    setRandomId(getRandomId());
-  }, [fetchPostTodo]);
 
   return (
     <S.backgroundDiv>

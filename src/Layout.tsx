@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Layout = () => {
+  useEffect(() => {}, []);
+
   return (
     <div>
       <ul>

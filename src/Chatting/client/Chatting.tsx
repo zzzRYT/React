@@ -14,7 +14,7 @@ const Chatting = () => {
   const chatRef = useRef<HTMLDivElement | null>(null);
   const connectChatServer = () => {
     console.log("connect chat server");
-    const _socket = io("localhost:3000", {
+    const _socket = io("localhost:3001", {
       autoConnect: false,
       query: {
         name,
